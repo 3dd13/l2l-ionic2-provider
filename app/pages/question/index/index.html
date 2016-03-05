@@ -1,0 +1,19 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Questions</ion-title>
+</ion-navbar>
+
+<ion-content>
+
+  <ion-card *ngFor="#question of questions" (click)="questionTapped($event, question)">
+    <ion-card-header>
+      <h1 primary>{{ question.subject }}</h1>
+    </ion-card-header>
+    <ion-card-content>
+      {{ question.text }}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
